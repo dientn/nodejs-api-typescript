@@ -1,4 +1,4 @@
-# nodejs-api-typescript
+# Nodejs API Typescript
 The API built with NodeJS, Express, MongoDB and TypeScript by Modular  Pattern
 
 ## Build Setup
