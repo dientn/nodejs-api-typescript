@@ -46,7 +46,6 @@ class App {
 
 
     private databaseSetup(): void{
-        console.log(this.mongoUrl, '');
         mongoose.connect(this.mongoUrl, config.dbOptions);
     }
 
