@@ -1,4 +1,3 @@
-import * as nodeDir from 'node-dir';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -34,5 +33,5 @@ export default function(directory, recursive = false, regExp = /\.(json|js)$/) {
 
     let files = getAllFiles(directory, recursive, regExp);
 
-    return new context(directory, files);
+    return new Context(directory, files);
 }

@@ -52,9 +52,9 @@ class App {
 
     private databaseSetup(): void{
         connect(this.mongoUrl, config.dbOptions).then(err =>{
-            if(err){
-                console.warn(err);
-            }
+            // if(err){
+            //     console.warn(err);
+            // }
         });
     }
 
