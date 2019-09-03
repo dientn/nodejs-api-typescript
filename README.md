@@ -7,7 +7,7 @@ The API built with NodeJS, Express, MongoDB and TypeScript by Modular  Pattern
 # install dependencies
 npm i
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost
 npm start
 
 # build for production with minification
