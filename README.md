@@ -1,5 +1,5 @@
 # Nodejs API Typescript
-The API built with NodeJS, Express, MongoDB and TypeScript by Modular  Pattern
+The API built with NodeJS, Express, MongoDB and TypeScript apply Modular  Pattern
 
 ## Build Setup
 
