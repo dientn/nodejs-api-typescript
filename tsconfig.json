@@ -6,12 +6,23 @@
     "sourceMap": true,
     "target": "es6",
     "outDir": "./dist",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ],
+      "@modules/*": ["modules/*"]
+    }
+    //    "types": [
+//      "webpack",
+//      "webpack-env"
+//    ]
   },
   "include": [
     "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
   ]
+
+//  "exclude": [
+//    "node_modules"
+//  ]
 }

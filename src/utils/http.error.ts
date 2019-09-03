@@ -1,4 +1,4 @@
-
+import {HttpCode} from "@modules/core/resources/enums/http.code";
 
 export abstract class HTTPClientError extends Error {
     readonly statusCode!: HttpCode;

@@ -6,9 +6,6 @@ export class ProductController{
     public async list (req: Request, res: Response, next: NextFunction) {
         const products: Array<IProductModel> =  await Product.find({quantity: {$gte: 0}});
         res.json(products);
-        next();
-
-
     }
 
     public async create (req: Request, res: Response, next: NextFunction) {

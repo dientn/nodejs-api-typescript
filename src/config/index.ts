@@ -14,3 +14,5 @@ export const dbOptions = {
     useFindAndModify: false
 };
 export const dbTablePrefix = process.env.DB_TABLE_PREFIX || "";
+
+export const isDebug = process.env.DEBUG === '1';

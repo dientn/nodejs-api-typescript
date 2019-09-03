@@ -3,12 +3,17 @@ import { applyMiddleware } from "../utils";
 import errorHandlers from "../middleware/error.handler";
 import middleware from "../middleware";
 import * as config from "../config";
-import * as mongoose from "mongoose";
+import { connect } from "mongoose";
 import {Request, Response} from "express";
+import * as http from "http";
+import {isDebug} from "../config";
+
+
 
 class App {
 
     public app: express.Application;
+    public server: http.Server;
     // public routePrv: Routes = new Routes();
 
     // public mongoUrl: string = 'mongodb://dalenguyen:123123@localhost:27017/CRMdb';
@@ -39,14 +44,18 @@ class App {
             return res.send("Wellcome");
         });
         // start express server
-        this.app.listen(config.port);
+        this.server = this.app.listen(config.port);
 
-        console.log(`Server listening on  ${config.protocol}://${config.host}:${config.port}`)
+        isDebug && console.log(`Server listening on  ${config.protocol}://${config.host}:${config.port}`)
     }
 
 
     private databaseSetup(): void{
-        mongoose.connect(this.mongoUrl, config.dbOptions);
+        connect(this.mongoUrl, config.dbOptions).then(err =>{
+            if(err){
+                console.warn(err);
+            }
+        });
     }
 
 }
