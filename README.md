@@ -1,5 +1,5 @@
 # Nodejs API Typescript
-The API built with NodeJS, Express, MongoDB and TypeScript apply Modular  Pattern, in this brand repo use mongoose connect to and integrate with mongodb
+The API built with NodeJS, Express, MongoDB and TypeScript apply Modular  Pattern, in this brand, repo use mongoose connect to and integrate with mongodb
 
 ## Build Setup
 
